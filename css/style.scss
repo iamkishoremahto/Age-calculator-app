@@ -1,0 +1,157 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+$Purple: hsl(259, 100%, 65%);
+$Light_red: hsl(0, 100%, 67%);
+$White: hsl(0, 0%, 100%);
+$Off_white: hsl(0, 0%, 94%);
+$Light_grey: hsl(0, 0%, 86%);
+$Smokey_grey: hsl(0, 1%, 44%);
+$Off_black: hsl(0, 0%, 8%);
+
+.main_container{
+    background-color: $Off_white;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calender_wrapper{
+    // border: 2px solid red;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    width: 700px;   
+    height: 600px;
+    border-radius: 15px;
+    border-bottom-right-radius: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $White;
+
+    .col{
+        height: 100%;
+        .row{
+            display: flex;
+            // align-items: center;
+            justify-content: center; 
+     
+            height: 100%;
+
+            .show_age{
+                // border: 2px solid red;
+                padding-left: 50px;
+
+                p{
+                    font-size: 3.5rem;
+                    font-weight: 700;
+                    color: $Off_black;
+                    span{
+                        color: $Purple;
+                    }
+                }
+            }
+
+            .middle_line{
+                height: 70px;
+               display: flex;
+               align-items: center;
+               justify-content: center;
+                position: relative;
+                padding: 10px;
+                // border: 2px solid red;
+                .middle_line_div{
+                    height: 2px;
+                    width: 90%;
+                    background-color: $Light_grey;
+                }
+                .submitBtn{
+                    position:absolute;
+                    background-color: $Purple;
+                    padding: 10px;
+                    border-radius: 50%;
+                    top:0%; 
+                    right: 6%;
+                    cursor: pointer;
+
+                }
+            }
+            .input_dob{
+                display: flex;
+                flex-direction: row;
+                gap: 10px;
+                // border: 2px solid red;
+                display: flex;
+                align-items: flex-end;
+                // justify-content:center;
+                // padding: 0px 30px;
+                padding-left: 30px;
+               
+                gap: 100px;
+                // width: 100%;
+                // 
+                .input_wrapper{
+                    position: relative;
+                    
+                    label{
+                        position:absolute;
+                        top: -25px;
+                        left: 0;
+                        text-transform: uppercase;
+                        color: $Smokey_grey;
+                        font-size: 0.8rem;
+                        font-weight: 700;
+                    }
+                   
+                    
+                    input{
+                        height: 60px;
+                        width: 100px;
+                        padding: 10px;
+                        font-size: 2rem;
+                        font-weight: 700;
+                        border-radius: 10px;
+                        border: 1px solid $Smokey_grey;
+                        &::placeholder{
+                           
+                            font-size: 2rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media(min-width:375px) and (max-width:800px){
+    .calender_wrapper{
+        width: 370px;
+
+        .row{
+            align-content: space-around !important;
+        }
+
+        .middle_line{
+            // height: 100px !important;
+            .submitBtn{
+                right: 40% !important;
+            }
+
+        }
+
+        .input_dob{
+            padding-top: 20px !important;
+            // padding-left: 0px !important;
+            gap: 10px !important;
+            .input_wrapper{
+                input{
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}

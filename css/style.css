@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main_container {
+  background-color: hsl(0, 0%, 94%);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calender_wrapper {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  width: 700px;
+  height: 600px;
+  border-radius: 15px;
+  border-bottom-right-radius: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(0, 0%, 100%);
+}
+.calender_wrapper .col {
+  height: 100%;
+}
+.calender_wrapper .col .row {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+}
+.calender_wrapper .col .row .show_age {
+  padding-left: 50px;
+}
+.calender_wrapper .col .row .show_age p {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: hsl(0, 0%, 8%);
+}
+.calender_wrapper .col .row .show_age p span {
+  color: hsl(259, 100%, 65%);
+}
+.calender_wrapper .col .row .middle_line {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 10px;
+}
+.calender_wrapper .col .row .middle_line .middle_line_div {
+  height: 2px;
+  width: 90%;
+  background-color: hsl(0, 0%, 86%);
+}
+.calender_wrapper .col .row .middle_line .submitBtn {
+  position: absolute;
+  background-color: hsl(259, 100%, 65%);
+  padding: 10px;
+  border-radius: 50%;
+  top: 0%;
+  right: 6%;
+  cursor: pointer;
+}
+.calender_wrapper .col .row .input_dob {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  display: flex;
+  align-items: flex-end;
+  padding-left: 30px;
+  gap: 100px;
+}
+.calender_wrapper .col .row .input_dob .input_wrapper {
+  position: relative;
+}
+.calender_wrapper .col .row .input_dob .input_wrapper label {
+  position: absolute;
+  top: -25px;
+  left: 0;
+  text-transform: uppercase;
+  color: hsl(0, 1%, 44%);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+.calender_wrapper .col .row .input_dob .input_wrapper input {
+  height: 60px;
+  width: 100px;
+  padding: 10px;
+  font-size: 2rem;
+  font-weight: 700;
+  border-radius: 10px;
+  border: 1px solid hsl(0, 1%, 44%);
+}
+.calender_wrapper .col .row .input_dob .input_wrapper input::-moz-placeholder {
+  font-size: 2rem;
+}
+.calender_wrapper .col .row .input_dob .input_wrapper input::placeholder {
+  font-size: 2rem;
+}
+
+@media (min-width: 375px) and (max-width: 800px) {
+  .calender_wrapper {
+    width: 370px;
+  }
+  .calender_wrapper .row {
+    align-content: space-around !important;
+  }
+  .calender_wrapper .middle_line .submitBtn {
+    right: 40% !important;
+  }
+  .calender_wrapper .input_dob {
+    padding-top: 20px !important;
+    gap: 10px !important;
+  }
+  .calender_wrapper .input_dob .input_wrapper input {
+    font-size: 1rem;
+  }
+}/*# sourceMappingURL=style.css.map */
